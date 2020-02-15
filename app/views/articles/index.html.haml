@@ -1,0 +1,30 @@
+.article-content
+  - if user_signed_in?
+    .article-content__header
+      %h1.container Edi Gate 
+      .article-content__header__search
+        = form_tag('#',method: :get) do
+          = text_field_tag :search
+          = submit_tag '検索', name: nil
+      .article-content__header__mypage
+        .signup__btn
+          =link_to 'マイページ', '#'
+  - else
+    .article-content__header
+      %h1.container Edi HOME
+      .article-content__header__search
+        = form_tag('#',method: :get) do
+          = text_field_tag :search
+          = submit_tag '検索', name: nil
+      .article-content__header__signup
+        .signup__btn
+          =link_to '新規会員登録', new_user_registration_path
+        .login__btn
+          =link_to 'ログイン', new_user_session_path
+
+  .article-content__main
+    .article-content__main__left リスト
+    .article-content__main__list リスト
+    .article-content__main__right リスト
+
+  .article-content__footer
