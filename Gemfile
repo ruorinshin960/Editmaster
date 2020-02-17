@@ -77,3 +77,7 @@ gem 'erb2haml'
 
 gem 'omniauth'
 gem 'omniauth-facebook'
+
+group :production do
+  gem 'unicorn', '5.4.1'
+end
