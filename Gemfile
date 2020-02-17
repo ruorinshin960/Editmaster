@@ -79,6 +79,7 @@ gem 'carrierwave'
 gem 'pry-rails'
 gem 'rubocop'
 gem 'erb2haml'
+gem 'fog-aws'
 
 gem 'omniauth'
 gem 'omniauth-facebook'
