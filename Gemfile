@@ -81,11 +81,11 @@ gem 'rubocop'
 gem 'erb2haml'
 gem 'fog-aws'
 gem 'therubyracer'
-gem 'less-rails'
-gem 'twitter-bootstrap-rails' 
+gem 'less-rails', git: 'https://github.com/MustafaZain/less-rails'
+gem 'twitter-bootstrap-rails'
 
 gem 'omniauth'
-gem 'omniauth-facebook'
+gem 'omniauth-twitter'
 
 group :production do
   gem 'unicorn', '5.4.1'

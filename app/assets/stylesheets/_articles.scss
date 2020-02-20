@@ -20,24 +20,26 @@
       input[type="text"] {
         width: 550px;
         height: 35px;
+      }
     }
-    input[type="submit"]{
-      display       : inline-block;
-      border: none;
-      border-radius : 5%;
-      font-size     : 12pt;
-      text-align    : center;
-      padding       : 5px 15px;
-      background    :  rgb(23, 127, 196);
-      color         : #ffffff;
-      line-height   : 1em;
-      transition    : .3s;
-      box-shadow    : 3px 3px 10px #666666; 
-    }
-    input[type="submit"]:hover{
-    box-shadow    : none;
-    opacity       : 1;
-    }
+    &__post{
+      display: table-cell;
+      top: -13.8px;
+      left: -120px;
+      position: relative;
+      .btn-warning{
+        color: #FFF;
+        font-size: 13pt;
+        padding: 11px;
+        text-decoration: none;
+        border: solid 1px rgb(26, 247, 255);
+        border-radius: 3px;
+        width: 550px;
+        height: 35px;
+      }
+      .btn-warning:hover {
+        background-color: rgb(25, 208, 214);
+      }
     }
     &__list{
       top: -13px;

@@ -5,8 +5,10 @@
         = link_to image_tag('Edit Master.png',size: "100x60"), root_path
       .article-content__header__search
         = form_tag('#',method: :get) do
-          = text_field_tag :search
-          = submit_tag '検索', name: nil
+          = text_field_tag :search, placeholder: "edit太郎"
+      .article-content__header__post
+        = link_to "/articles/new", class: 'btn-warning' do
+          投稿する
       .article-content__header__list
         = link_to '#', class: "mypage__btn" do
           マイページ
@@ -19,7 +21,9 @@
       .article-content__header__search
         = form_tag('#',method: :get) do
           = text_field_tag :search
-          = submit_tag '検索', name: nil
+      .article-content__header__post
+        = link_to "/articles/new", class: "btn-warning" do
+          投稿する
       .article-content__header__list
         = link_to '/users/sign_up', class: "signup__btn" do
           新規会員登録
