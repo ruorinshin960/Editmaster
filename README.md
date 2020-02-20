@@ -3,6 +3,9 @@
 ruby 2.5.7
 Rails 5.2.3
 
+# 機能
+Qiita::Markdownによる新規投稿機能
+
 # DB設計 
 
 ## usersテーブル
