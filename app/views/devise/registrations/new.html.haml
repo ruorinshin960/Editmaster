@@ -1,21 +1,31 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+.registration-menu
+  .registration-menu__header
+    = link_to image_tag('Edit Master.png',size: "220x100"), root_path
+  .registration-menu__triangle
+  .registration-menu__top 新規登録
+  .registration-menu__container
+    .registration-menu__twitter
+      = link_to image_tag('ttt.png',size: "120x35"), "#"
+    .registration-menu__inner OR
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = render "devise/shared/error_messages", resource: resource
+      .registration-menu__field
+        %label ニックネーム
+        %span 必須
+        %br/
+        = f.text_field :nickname, autofocus: true, autocomplete: "nickname", placeholder: "edit太郎", required: ""
+      .registration-menu__field
+        %label メールアドレス
+        %span 必須
+        %br/
+        = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "editmaster@edi.com", required: ""
+      .registration-menu__field
+        %label パスワード
+        %span 必須
+        %br/
+        = f.password_field :password, autocomplete: "new-password", placeholder: "英数字を組み合わせた6文字以上", required: ""
+      .registration-menu__btn
+        = f.submit "登録する"
+    .registration-menu__under  
+      = render "devise/shared/links"
+  

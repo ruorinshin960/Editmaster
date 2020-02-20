@@ -1,17 +1,25 @@
-%h2 Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "current-password"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "devise/shared/links"
+.login-menu
+  .login-menu__header
+    = link_to image_tag('Edit Master.png',size: "220x100"), root_path
+  .login-menu__triangle
+  .login-menu__top ログイン
+  .login-menu__container
+    .login-menu__twitter
+      = link_to image_tag('ttt.png',size: "120x35"), "#"
+    .login-menu__inner OR
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .login-menu__field
+        %label メールアドレス
+        %br/
+        = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "editmaster@edi.com", required: ""
+      .login-menu__field
+        %label パスワード
+        %br/
+        = f.password_field :password, autocomplete: "current-password", placeholder: "英数字を組み合わせた6文字以上", required: ""
+      - if devise_mapping.rememberable?
+        .login-menu__remember
+          = f.check_box :remember_me
+          .login-menu__text パスワードを記憶させる
+      .login-menu__btn
+        = f.submit "ログイン"
+      = link_to "パスワードを忘れましたか？", new_password_path(resource_name),id: 'remember'
