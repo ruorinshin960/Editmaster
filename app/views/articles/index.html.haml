@@ -1,38 +1,18 @@
-.article-content
-  - if user_signed_in?
-    .article-content__header
-      .container 
-        = link_to image_tag('Edit Master.png',size: "100x60"), root_path
-      .article-content__header__search
-        = form_tag('#',method: :get) do
-          = text_field_tag :search, placeholder: "edit太郎"
-      .article-content__header__post
-        = link_to "/articles/new", class: 'btn-warning' do
-          投稿する
-      .article-content__header__list
-        = link_to '#', class: "mypage__btn" do
-          マイページ
-        = link_to '/users/sign_out', class: "logout__btn", method: :delete do
-          ログアウト
-  - else
-    .article-content__header
-      .container 
-        = link_to image_tag('Edit Master.png',size: "140x60"), root_path
-      .article-content__header__search
-        = form_tag('#',method: :get) do
-          = text_field_tag :search
-      .article-content__header__post
-        = link_to "/articles/new", class: "btn-warning" do
-          投稿する
-      .article-content__header__list
-        = link_to '/users/sign_up', class: "signup__btn" do
-          新規会員登録
-        = link_to '/users/sign_in', class: "login__btn" do
-          ログイン
+.wrapper
+  = render partial: 'header'
 
   .article-content__main
     .article-content__main__left リスト
-    .article-content__main__list リスト
-    .article-content__main__right リスト
-
+    .article-content__main__center 
+      - @article.each do |article|
+        .article-content__main__center__list 
+          .article-content__main__center__list__title
+            = article.title
+          .article-content__main__center__list__tagbox
+            = render 'articles/tag_list', tag_list: article.tag_list
+          .article-content__main__center__list__nickname
+            = "投稿者 " + article.user.nickname
+          .article-content__main__center__list__datetime
+            = time_ago_in_words(article.created_at)+"前"
+    .article-content__main__right 
   .article-content__footer

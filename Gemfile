@@ -70,7 +70,9 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem "font-awesome-rails"
+gem 'bootstrap-sass'
+gem 'font-awesome-rails'
+gem 'font-awesome-sass', '~> 5.12.0'
 gem 'devise'
 gem 'jquery-rails'
 gem 'haml-rails'
@@ -81,8 +83,10 @@ gem 'rubocop'
 gem 'erb2haml'
 gem 'fog-aws'
 gem 'therubyracer'
+gem 'acts-as-taggable-on', git: 'https://github.com/mbleigh/acts-as-taggable-on'
 gem 'less-rails', git: 'https://github.com/MustafaZain/less-rails'
 gem 'twitter-bootstrap-rails'
+gem 'i18n_generators'
 
 gem 'omniauth'
 gem 'omniauth-twitter'

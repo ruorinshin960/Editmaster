@@ -1,5 +1,6 @@
-.article-content{
+.wrapper{
   background-color:#f5f5f5;
+.article-content{
   &__header{
     position: fixed;
     background-color: rgb(81, 81, 82);
@@ -10,16 +11,31 @@
     .container {
       top: 8px;
       position: relative;
+      width: 200px;
       padding: 0 0 0 10px;
     }
     &__search{
-      top: -13px;
-      position: relative;
       display: table-cell;
-      padding: 0 0 0 250px;
-      input[type="text"] {
-        width: 550px;
-        height: 35px;
+      padding: 20px 0 0 200px;
+    input{
+      display: table-cell;
+      float: left;
+      height:40px;
+      width: 450px;
+      background:#eee;
+    .form-control{
+      max-width:300px;	
+      }
+    }
+      button{
+      position: relative;
+      left: -5px;
+      height:40px;
+      width:50px;	
+      background:#7fbfff;
+      color:#fff;
+      border:none;
+      border-radius:0 25px 25px 0;
       }
     }
     &__post{
@@ -27,19 +43,6 @@
       top: -13.8px;
       left: -120px;
       position: relative;
-      .btn-warning{
-        color: #FFF;
-        font-size: 13pt;
-        padding: 11px;
-        text-decoration: none;
-        border: solid 1px rgb(26, 247, 255);
-        border-radius: 3px;
-        width: 550px;
-        height: 35px;
-      }
-      .btn-warning:hover {
-        background-color: rgb(25, 208, 214);
-      }
     }
     &__list{
       top: -13px;
@@ -99,12 +102,31 @@
     width: 100%;
     height: 1200px;
     padding: 120px 0 0 0;
-
-    &__list{
+    &__center {
     width: 750px;
     height: 100%;
-    background-color: white;
+    background-color: #fff;
+    &__list{
+      border-bottom: 1px solid #3f3d3d;
+    &__title{
+      font-weight: bold;
+      font-size: 16px;
+      padding: 5px 0 0 5px;
+    }
+    &__tagbox{
+      padding: 5px 0 0 5px;
+    }
+    &__nickname{
+      font-weight: bold;
+      display: table-cell;
+      padding: 5px 0 0 7px;
+    }
+    &__datetime{
+      display: table-cell;
+      padding: 5px 0 0 20px;
+    }
   }
+}
     &__left{
     width: 350px;
 
@@ -119,4 +141,5 @@
   height: 100px;
   background-color:#f5f5f5;
   }
+ } 
 }

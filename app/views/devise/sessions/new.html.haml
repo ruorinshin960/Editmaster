@@ -23,3 +23,5 @@
       .login-menu__btn
         = f.submit "ログイン"
       = link_to "パスワードを忘れましたか？", new_password_path(resource_name),id: 'remember'
+      .login-menu__under  
+        = render "devise/shared/links"

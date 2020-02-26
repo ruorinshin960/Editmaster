@@ -24,7 +24,7 @@
     text-transform: uppercase;
     color: #fff;
   }
-  &__inner, &__field, &__twitter, &__btn{
+  &__inner, &__field, &__twitter, &__btn,&__under{
     margin-top: 10px;
   }
   &__remember{
@@ -75,6 +75,29 @@
   }
   #remember{
     font-size: 14px;
-    color: rgb(230, 24, 24);
+    color: rgb(31, 125, 202);
+  }
+  &__under{
+    height: 50px;
+    width: 100px;
+    border: solid rgb(255, 26, 26);
+    #signin{
+      text-align: center;
+      box-sizing: border-box;
+      display: block;
+      border-width: 1px;
+      border-style: solid;
+      padding: 10px 0 0 0;
+      outline: 0;
+      font-family: inherit;
+      font-size: 0.95em;
+      border: solid #008080;
+      border-color: transparent;
+      color: rgb(255, 26, 26);
+      border-radius: 3px;
+    }
+  }
+  &__under:hover{
+    background-color: #fff;
   }
  }
