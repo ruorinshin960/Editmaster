@@ -5,7 +5,7 @@ Rails 5.2.3
 
 # 機能
 Qiita::Markdownによる新規投稿機能
-bootstrap
+bootstrap　タグ機能
 
 # DB設計 
 
