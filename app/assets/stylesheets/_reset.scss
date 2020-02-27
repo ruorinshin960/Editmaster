@@ -1,3 +1,26 @@
+body{
+  background-color: #fff;
+  font-size: 1.2em;
+  color: #333;
+  text-align: left;
+  letter-spacing: .5px;
+   a {
+    text-decoration: none;
+   }
+   a:hover {
+    color: red;
+  }
+  
+  a.no-color-change:link,
+  a.no-color-change:visited,
+  a.no-color-change:hover,
+  a.no-color-change:active {
+    color: blue;
+  }
+  li {
+    list-style: none;
+  }
+}
 /*!
  * YUI 3.5.0 - reset.css (http://developer.yahoo.com/yui/3/cssreset/)
  * http://cssreset.com

@@ -1,0 +1,95 @@
+.registration-menu{
+  width: 400px;
+  margin: 16px auto;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  &__header{
+   text-align: center;
+  }
+  &__triangle{
+    width: 0;
+    margin-right: auto;
+    margin-left: auto;
+    border: 12px solid transparent;
+    border-bottom-color: rgb(255, 26, 26);
+  }
+  &__top{
+    margin-top: 0;
+    margin-bottom: 0;
+    background: rgb(255, 26, 26);
+    padding: 20px;
+    font-size: 1.4em;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  &__inner, &__field, &__twitter, &__btn,&__under{
+    margin-top: 10px;
+  }
+  &__under {
+    height: 50px;
+    width: 100px;
+    border: solid #28d;
+   #login{
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    border-width: 1px;
+    border-style: solid;
+    padding: 10px 0 0 0;
+    outline: 0;
+    font-family: inherit;
+    font-size: 0.95em;
+    border: solid #008080;
+    border-color: transparent;
+    color: #28d;
+    border-radius: 3px;
+   }
+  }
+  &__under:hover{
+    background-color: #fff;
+  }
+  &__container{
+    background: #ebebeb;
+    padding: 12px;
+  }
+  input{
+    padding: 12px;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    padding: 12px;
+    outline: 0;
+    font-family: inherit;
+    font-size: 0.95em;
+    background: #fff;
+    border-color: #bbb;
+    color: #555;
+  }
+  input[type="submit"] {
+    background: rgb(255, 26, 26);
+    border-color: transparent;
+    color: #fff;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background: rgb(230, 24, 24);
+  }
+  label {
+    font-weight: 600;
+    font-size: 14px;
+  }
+  span {
+    position: relative;
+    top: -2px;
+    background: #ea352d;
+    margin: 0 0 0 8px;
+    padding:  2px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 10px;
+  }
+ }
