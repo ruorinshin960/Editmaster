@@ -2,12 +2,13 @@
   = render partial: 'header'
 
   .article-content__main
-    .article-content__main__left リスト
+    .article-content__main__left 
     .article-content__main__center 
       - @article.each do |article|
-        .article-content__main__center__list 
+        .article-content__main__center__list
           .article-content__main__center__list__title
-            = article.title
+            %a{href: "/articles/#{article.id}"}
+              = article.title
           .article-content__main__center__list__tagbox
             = render 'articles/tag_list', tag_list: article.tag_list
           .article-content__main__center__list__nickname
