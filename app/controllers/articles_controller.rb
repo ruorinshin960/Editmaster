@@ -9,6 +9,10 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
+  def show
+    @article = Article.find(params[:id])
+  end
+
   def create
     Article.create(article_params)
     redirect_to root_path
