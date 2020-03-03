@@ -16,4 +16,5 @@
           .article-content__main__center__list__datetime
             = time_ago_in_words(article.created_at)+"前"
     .article-content__main__right 
-  .article-content__footer
+  .article-content__footer  
+    = paginate @article
