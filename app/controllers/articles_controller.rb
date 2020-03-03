@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
 
   def index
-    @article = Article.all
+    @article = Article.page(params[:page]).per(15).all.order(created_at: :desc)
   end
 
   def new

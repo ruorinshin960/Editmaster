@@ -87,6 +87,7 @@ gem 'acts-as-taggable-on', git: 'https://github.com/mbleigh/acts-as-taggable-on'
 gem 'less-rails', git: 'https://github.com/MustafaZain/less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'i18n_generators'
+gem 'kaminari'
 
 gem 'omniauth'
 gem 'omniauth-twitter'
