@@ -14,8 +14,14 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    Article.create(article_params)
-    redirect_to root_path
+    @article = Article.new(article_params)
+    url = params[:article][:youtube_url]
+    url = url.last(11)
+    @article.youtube_url = url
+    if @article.save
+      redirect_to root_path
+    end
+
   end
 
   def article_params

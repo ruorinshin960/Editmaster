@@ -111,10 +111,12 @@
     &__title{
       font-weight: bold;
       font-size: 16px;
-      padding: 5px 0 0 5px;
+      padding: 5px 5px 0 5px;
+      overflow:hidden;
     }
     &__tagbox{
       padding: 5px 0 0 5px;
+      overflow-wrap: break-word;
     }
     &__nickname{
       font-weight: bold;

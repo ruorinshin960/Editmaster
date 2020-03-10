@@ -4,8 +4,11 @@
   .login-menu__triangle
   .login-menu__top ログイン
   .login-menu__container
-    .login-menu__twitter
-      = link_to image_tag('ttt.png',size: "120x35"), "#"
+    .login-menu__sns 
+      .login-menu__google
+        = link_to image_tag('google.png',size: "60x50"), user_google_oauth2_omniauth_authorize_path, method: :post
+      .login-menu__twitter
+        = link_to image_tag('Twitter_Social_Icon_Rounded_Square_Color.png',size: "60x50"), "#"
     .login-menu__inner OR
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
       .login-menu__field

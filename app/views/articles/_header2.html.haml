@@ -1,0 +1,10 @@
+.container 
+  = link_to image_tag('Edit Master.png',size: "140x60"), root_path
+.post__header__search
+  %input.form-control{placeholder: "キーワードを入力",type: "text",action: "#",method: :get}
+  %span.input-group-btn
+    %button.btn.btn-default{type: "submit"}
+      %i.glyphicon.glyphicon-search
+.post__header__list
+  = link_to '/users/show' do
+    %button.btn.btn-primary{type: "button"} マイページ
