@@ -3,6 +3,7 @@ class ArticlesController < ApplicationController
 
   def index
     @article = Article.page(params[:page]).per(15).all.order(created_at: :desc)
+    @tags = ActsAsTaggableOn::Tag.most_used(3)
   end
 
   def new

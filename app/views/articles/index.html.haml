@@ -3,6 +3,7 @@
 
   .article-content__main
     .article-content__main__left 
+      = render partial: 'leftbar'
     .article-content__main__center 
       - @article.each do |article|
         .article-content__main__center__list
