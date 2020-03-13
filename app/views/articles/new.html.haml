@@ -1,6 +1,6 @@
 .post
   .post__header
-    = render partial: 'header2'
+    = render partial: 'header2', collection: @search_articles, as: "article"
   .post-content
   = form_for @article, method: :post do |f|
     .post-content__title

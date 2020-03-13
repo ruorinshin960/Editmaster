@@ -3,6 +3,7 @@
 .article-content{
   &__header{
     position: fixed;
+    z-index: 1;
     background-color: rgb(81, 81, 82);
     height: 80px;
     width: 100%;
@@ -135,6 +136,7 @@
 }
     &__left{
     width: 350px;
+    z-index: 0;
     .leftbar-tag{
       font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
       margin: 0 30px 0 30px;

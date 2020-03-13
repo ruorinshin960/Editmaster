@@ -4,10 +4,11 @@
       .container 
         = link_to image_tag('Edit Master.png',size: "140x60"), root_path
       .article-content__header__search
-        %input.form-control{placeholder: "キーワードを入力",type: "text",action: "#",method: :get}
-        %span.input-group-btn
-          %button.btn.btn-default{type: "submit"}
-            %i.glyphicon.glyphicon-search
+        = search_form_for @search, url: search_articles_path do |form|
+          = form.text_field :title_cont, placeholder: "投稿を検索する", class: "form-control"
+          %span.input-group-btn
+            %button.btn.btn-default{type: "form.submit"}
+              %i.glyphicon.glyphicon-search
       .article-content__header__post
         = link_to "/articles/new", class: "btn-warning" do
           %button.btn.btn-success{type: "button"} 投稿する

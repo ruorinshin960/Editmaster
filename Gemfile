@@ -89,6 +89,7 @@ gem 'twitter-bootstrap-rails'
 gem 'i18n_generators'
 gem 'kaminari'
 gem 'dotenv-rails'
+gem 'ransack'
 
 gem 'omniauth'
 gem 'omniauth-twitter'

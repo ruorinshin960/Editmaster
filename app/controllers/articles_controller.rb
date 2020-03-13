@@ -1,9 +1,9 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
+  before_action :tag_rank
 
   def index
     @article = Article.page(params[:page]).per(15).all.order(created_at: :desc)
-    @tags = ActsAsTaggableOn::Tag.most_used(3)
   end
 
   def new
@@ -12,6 +12,9 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+  end
+
+  def search
   end
 
   def create
@@ -25,8 +28,14 @@ class ArticlesController < ApplicationController
 
   end
 
+  private
+
   def article_params
     params.require(:article).permit(:title, :text, :tag_list).merge(user_id: current_user.id)
+  end
+
+  def tag_rank
+    @tags = ActsAsTaggableOn::Tag.most_used(3)
   end
   
 end
