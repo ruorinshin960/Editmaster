@@ -1,6 +1,6 @@
 .article-detail
   .article-detail__header
-    = render partial: 'header2', collection: @search_articles, as: "article"
+    = render partial: 'header2'
   .article-detail__main
     .article-detail__left
       - if @article.youtube_url.present?
