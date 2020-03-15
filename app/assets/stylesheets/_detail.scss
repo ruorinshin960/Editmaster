@@ -98,4 +98,21 @@
      margin: 5px;
      overflow-wrap: break-word;
     }
+    &__edit{
+      position: relative;
+      top: 20px;
+      left: 980px;
+      .btn-edit{
+       color: #fff;
+       background-color: rgba(77, 209, 37, 0.849);
+       margin: 0 5px 0 0;
+      }
+      .btn-delete{
+        color: #fff;
+        background-color: rgb(71, 64, 64);
+      }
+      .btn-delete:hover{
+        background-color: rgb(145, 139, 139);
+      }
+    }
   }

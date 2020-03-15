@@ -90,6 +90,8 @@ gem 'i18n_generators'
 gem 'kaminari'
 gem 'dotenv-rails'
 gem 'ransack'
+gem 'redcarpet'
+gem 'coderay'
 
 gem 'omniauth'
 gem 'omniauth-twitter'

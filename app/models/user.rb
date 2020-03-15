@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   has_many :articles, dependent: :destroy
   acts_as_ordered_taggable_on :skills, :interests
+  
+  mount_uploader :image, ImageUploader
 
   def self.find_oauth(auth)
     @user = User.where(uid: auth.uid, provider: auth.provider).first #userテーブルにprovider、uidがあったらログイン処理

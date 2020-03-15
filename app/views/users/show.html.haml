@@ -1,0 +1,70 @@
+.wrapper
+  = render partial: 'articles/header'
+- if user_signed_in? && current_user.id.to_s == params[:id]
+  .userpage
+    .userpage-left
+      .userpage-left__image
+        - if current_user.image?
+          %h1 プロフィール画像
+          %li
+            = image_tag current_user.image.thumb50.url
+          %a
+            = link_to "編集", edit_user_path
+        - else
+          %li
+            = image_tag('sample_img.png',size: "70x50")
+      .userpage-left__name
+        %h1 ニックネーム
+        %li
+          = current_user.nickname
+        %a
+          = link_to "編集", edit_user_path
+      .userpage-left__email
+        %h1 メールアドレス
+        %li
+          = current_user.email
+        %a
+          = link_to "編集", edit_user_path
+    .userpage-right
+      - @article.each do |article|
+        .userpage-right__list
+          .userpage-right__list__title
+            %a{href: "/articles/#{article.id}"}
+              = article.title
+          .userpage-right__list__tagbox
+            = render 'articles/tag_list', tag_list: article.tag_list
+          .userpage-right__list__datetime
+            = time_ago_in_words(article.created_at)+"前"
+  .userpage__footer  
+    = paginate @article
+- else
+  .userpage
+    .userpage-left
+      .userpage-left__image
+        - if @user.image?
+          %h1 プロフィール画像
+          %li
+            = image_tag @user.image.thumb50.url
+          %a
+            = link_to "編集", edit_user_path
+        - else
+          %h1 プロフィール画像
+          %li
+            = image_tag('sample_img.png',size: "70x50")
+      .userpage-left__name
+        %h1 ニックネーム
+        %li
+          = @user.nickname
+    .userpage-right
+      - @articles.each do |article|
+        .userpage-right__list
+          .userpage-right__list__title
+            %a{href: "/articles/#{article.id}"}
+              = article.title
+          .userpage-right__list__tagbox
+            = render 'articles/tag_list', tag_list: article.tag_list
+          .userpage-right__list__datetime
+            = time_ago_in_words(article.created_at)+"前"
+  .userpage__footer  
+    = paginate @articles
+ 

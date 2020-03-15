@@ -1,11 +1,10 @@
 .wrapper
-  = render partial: 'header', collection: @search_articles, as: "article"
+  = render partial: 'header'
 
   .article-content__main
     .article-content__main__left 
       = render partial: 'leftbar'
     .article-content__main__center 
-    
       - @article.each do |article|
         .article-content__main__center__list
           .article-content__main__center__list__title
@@ -14,7 +13,8 @@
           .article-content__main__center__list__tagbox
             = render 'articles/tag_list', tag_list: article.tag_list
           .article-content__main__center__list__nickname
-            = "投稿者 " + article.user.nickname
+            %a{href: "/users/#{article.user_id}"}
+              = "投稿者 " + article.user.nickname
           .article-content__main__center__list__datetime
             = time_ago_in_words(article.created_at)+"前"
     .article-content__main__right 

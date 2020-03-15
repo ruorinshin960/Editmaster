@@ -331,6 +331,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    redcarpet (3.5.0)
     ref (2.0.0)
     regexp_parser (1.6.0)
     responders (3.0.0)
@@ -452,6 +453,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   carrierwave
   chromedriver-helper
+  coderay
   coffee-rails (~> 4.2)
   devise
   dotenv-rails
@@ -478,6 +480,7 @@ DEPENDENCIES
   rails (~> 5.2.3)
   rails-controller-testing
   ransack
+  redcarpet
   rspec-rails
   rubocop
   sass-rails (~> 5.0)

@@ -19,5 +19,10 @@
           .article-detail__nd__date
             = "更新日: " +l(@article.updated_at, format: :long)
         .article-detail__body
-          = @article.text
-
+          = markdown(@article.text)
+  - if user_signed_in? && current_user.id == @article.user_id
+    .article-detail__edit
+      = link_to edit_article_path(@article) do
+        %button.btn.btn-edit{type: "button"} 編集
+      = link_to @article, method: :delete,data: { confirm: "この記事を削除して大丈夫ですか？" } do
+        %button.btn.btn-delete 削除
