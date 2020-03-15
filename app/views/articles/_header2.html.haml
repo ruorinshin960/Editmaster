@@ -1,0 +1,8 @@
+.container 
+  = link_to image_tag('Edit Master.png',size: "140x60"), root_path
+.post__header__search
+  = search_form_for @search, url: search_articles_path do |form|
+    = form.text_field :title_cont, placeholder: "記事を検索する", class: "form-control"
+    %span.input-group-btn
+      %button.btn.btn-default{type: "form.submit"}
+        %i.glyphicon.glyphicon-search

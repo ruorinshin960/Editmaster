@@ -1,0 +1,13 @@
+- if @tags.present?
+  .leftbar-tag
+    %span 人気のタグ
+    - @tags.each.with_index(1) do |tag, i|
+      .leftbar-tag__lank
+        .leftbar-tag__lank__num
+          第
+          =  i 
+          位
+        .leftbar-tag__lank__name
+          = tag.name
+- else
+  .leftbar-tag NO DATA

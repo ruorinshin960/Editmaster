@@ -1,0 +1,94 @@
+.userpage{
+  padding: 120px 0 0 0;
+  background-color: #f5f5f5;
+  height: 716px;
+  display: flex;
+  .userpage-left{
+    z-index: 0;
+    border-collapse: collapse;
+    margin: 0 200px 0 10px;
+    &__image{
+      position: relative;
+      color: white;
+      padding: 1em 1.2em;
+      border-radius:5px;
+      background: #2f3131;
+      box-shadow:1px 1px 1px rgba(0,0,0,1);
+      margin-bottom: 10px;
+      line-height: 50px;
+      h1{
+        line-height: 50px;
+      }
+      li{
+        height: 50px;
+        width: 50px;
+        position: relative;
+        color: white;
+        border-radius: 50%;
+      }
+    }
+    &__name, &__email{
+      position: relative;
+      color: white;
+      padding: 1em 1.2em;
+      border-radius:5px;
+      background: #2f3131;
+      box-shadow:1px 1px 1px rgba(0,0,0,1);
+      margin-bottom: 10px;
+    }
+    h1{
+      display: table-cell;
+      width: 120px;
+      text-align:left;
+    }
+    a{
+     margin: 0 0 0 auto;
+     padding: 0 10px 0 0;
+     font-weight: bold;
+     cursor: pointer;
+     cursor: hand;
+     color: #e03939;
+     display: table-cell;
+     text-align: right;
+    }
+     li{
+    display: table-cell;
+    font-size: 10pt;
+    }
+  }
+
+  .userpage-right{
+    z-index: 0;
+    width: 700px;
+    height: 505px;
+    background-color: #fff;
+    margin: 0 0 0 -120px;
+    &__list{
+      border-bottom: 1px solid #3f3d3d;
+      &__title{
+        font-weight: bold;
+        font-size: 16px;
+        padding: 5px;
+        white-space: nowrap;  
+        overflow: hidden;  
+        text-overflow: ellipsis;  
+        -webkit-text-overflow: ellipsis;  
+        -o-text-overflow: ellipsis;  
+      }
+      &_tagbox{
+        padding: 5px 0 0 5px;
+        overflow-wrap: break-word;
+      }
+      &__datetime{
+        display: table-cell;
+        padding: 5px 0 0 5px;
+      }
+    }
+  }
+  &__footer {
+    position: absolute;
+    background-color: #f5f5f5;
+    top: 640px;
+    left: 600px;
+  }
+}

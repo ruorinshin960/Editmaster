@@ -24,7 +24,21 @@
     text-transform: uppercase;
     color: #fff;
   }
-  &__inner, &__field, &__twitter, &__btn,&__under{
+  &__sns{
+    display: flex;
+  }
+  &__google{
+    margin: 0 0 0 110px;
+  }
+  &__twitter{
+    margin: 0 0 0 40px;
+  }
+  &__inner{
+   text-align: center;
+   font-weight: 600;
+   font-size: 18px;
+  }
+  &__inner, &__field,&__google, &__twitter, &__btn,&__under{
     margin-top: 10px;
   }
   &__under {

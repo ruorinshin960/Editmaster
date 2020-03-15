@@ -3,6 +3,7 @@
 .article-content{
   &__header{
     position: fixed;
+    z-index: 1;
     background-color: rgb(81, 81, 82);
     height: 80px;
     width: 100%;
@@ -100,21 +101,34 @@
   &__main{
     display: flex;
     width: 100%;
-    height: 1200px;
+    min-height: 600px;
     padding: 120px 0 0 0;
     &__center {
     width: 750px;
-    height: 1095px;
     background-color: #fff;
+    &__top{
+      background-color: #f5f5f5;
+      text-align: center;
+      font-size: 16px;
+      overflow-wrap: break-word;
+      margin: -10px 0 0 0;
+      padding: 0 5px 10px 0;
+    }
     &__list{
       border-bottom: 1px solid #3f3d3d;
     &__title{
       font-weight: bold;
       font-size: 16px;
-      padding: 5px 0 0 5px;
+      padding: 5px 5px 0 5px;
+      white-space: nowrap;  
+      overflow: hidden;  
+      text-overflow: ellipsis;  
+      -webkit-text-overflow: ellipsis;  
+      -o-text-overflow: ellipsis;  
     }
     &__tagbox{
       padding: 5px 0 0 5px;
+      overflow-wrap: break-word;
     }
     &__nickname{
       font-weight: bold;
@@ -129,11 +143,55 @@
 }
     &__left{
     width: 350px;
-
+    z-index: 0;
+    .leftbar-tag{
+      font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+      margin: 0 30px 0 30px;
+      background-color: #fff;
+      height: 160px;
+      span{
+        position: relative;
+        padding: 0.2em 0.5em 0.5em;
+        background: #5097f5;
+        font-size: 13pt;
+        color: white;
+       }
+       span:before{
+        position: absolute;
+        content: '';
+        top: 100%;
+        left: 0;
+        border: none;
+        border-bottom: solid 15px transparent;
+        border-right: solid 20px rgb(60, 63, 62);
+       }
+       &__lank{
+        position: relative;
+        top:  8px;
+        left: 25px;
+         &__num{
+         font-weight: bold;
+         font-size: 10pt;
+        }
+         &__name{
+          padding: 0 0 5px 0;
+          font-size: 10pt;
+          color: #FF8C00;
+          background: -webkit-linear-gradient(0deg, rgb(40, 172, 158), #FF8C00, #FF0080);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          white-space: nowrap;  
+          overflow: hidden;  
+          text-overflow: ellipsis;  
+          -webkit-text-overflow: ellipsis;  
+          -o-text-overflow: ellipsis;
+         }
+     }
+    }
   }
+
     &__right{
     width: 350px;
-
   }
 }
 

@@ -1,8 +1,28 @@
-.card
-  .card-header.bg-info.text-white
-    %h4
-    = @article.title
-  .card-body
-    = @article.text
-  .card-body
-    = @article.user.nickname
+.article-detail
+  .article-detail__header
+    = render partial: 'header2'
+  .article-detail__main
+    .article-detail__left
+      - if @article.youtube_url.present?
+        %iframe{allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "", frameborder: "0", height: "315", src: "https://www.youtube.com/embed/#{@article.youtube_url}", :width => "560"}
+      - else
+        %h1.nothing NO DATA
+    .article-detail__right
+      .article-detail__list
+        .article-detail__title
+          = @article.title
+        .article-detail__tag
+          = render 'articles/tag_list', tag_list: @article.tag_list
+        .article-detail__nd
+          .article-detail__nd__name
+            = " 投稿者: " + @article.user.nickname
+          .article-detail__nd__date
+            = "更新日: " +l(@article.updated_at, format: :long)
+        .article-detail__body
+          = markdown(@article.text)
+  - if user_signed_in? && current_user.id == @article.user_id
+    .article-detail__edit
+      = link_to edit_article_path(@article) do
+        %button.btn.btn-edit{type: "button"} 編集
+      = link_to @article, method: :delete,data: { confirm: "この記事を削除して大丈夫ですか？" } do
+        %button.btn.btn-delete 削除

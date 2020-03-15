@@ -1,0 +1,76 @@
+.user-edi{
+  width: 400px;
+  margin: 16px auto;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  &__header{
+   text-align: center;
+  }
+  &__triangle{
+    width: 0;
+    margin-right: auto;
+    margin-left: auto;
+    border: 12px solid transparent;
+    border-bottom-color: rgba(77, 209, 37, 0.849);
+  }
+  &__top{
+    margin-top: 0;
+    margin-bottom: 0;
+    background: rgba(77, 209, 37, 0.849);
+    padding: 20px;
+    font-size: 1.4em;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  &__container{
+    background: #ebebeb;
+    padding: 12px;
+  }
+  input{
+    padding: 12px;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    padding: 12px;
+    outline: 0;
+    font-family: inherit;
+    font-size: 0.95em;
+    background: #fff;
+    border-color: #bbb;
+    color: #555;
+  }
+  input[type="submit"] {
+    background: rgba(77, 209, 37, 0.849);
+    border-color: transparent;
+    color: #fff;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background: rgb(60, 190, 21);
+  }
+  &__inner{
+    &__list{
+      text-align: center;
+    label{
+      margin: 0 0 10px 0;
+     }
+    }
+    &__image{
+      margin: 0 0 10px 0;
+    }
+    a{
+      font-weight: bold;
+      font-size: 15px;
+    }
+    &__actions{
+      margin: 15px 0 0px 0;
+    }
+  }
+  .file-input, .field-input{
+    margin: 5px 0 5px 0;
+  }
+}

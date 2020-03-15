@@ -4,8 +4,15 @@
   .article-content__main
     .article-content__main__left 
       = render partial: 'leftbar'
-    .article-content__main__center 
-      - @article.each do |article|
+    .article-content__main__center
+      .article-content__main__center__top
+        - if params[:q]['title_cont'] == ""
+          = "検索キーワードがありません。"
+        - elsif @search_articles.present?
+          = "「#{params[:q][:title_cont]}」の検索結果: #{@search_articles.count}個"
+        - else
+          = "検索に一致する記事はありませんでした"
+      - @search_articles.each do |article|
         .article-content__main__center__list
           .article-content__main__center__list__title
             %a{href: "/articles/#{article.id}"}
@@ -13,10 +20,8 @@
           .article-content__main__center__list__tagbox
             = render 'articles/tag_list', tag_list: article.tag_list
           .article-content__main__center__list__nickname
-            %a{href: "/users/#{article.user_id}"}
-              = "投稿者 " + article.user.nickname
+            = "投稿者 " + article.user.nickname
           .article-content__main__center__list__datetime
             = time_ago_in_words(article.created_at)+"前"
     .article-content__main__right 
   .article-content__footer  
-    = paginate @article

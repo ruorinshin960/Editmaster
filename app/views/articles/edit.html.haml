@@ -2,7 +2,7 @@
   .post__header
     = render partial: 'header2'
   .post-content
-  = form_for @article, method: :post do |f|
+  = form_for(@article) do |f|
     .post-content__title
       = f.text_field :title, class: "form-control",placeholder: "タイトル", required: ""
     .post-content__tag
@@ -12,5 +12,4 @@
     .post-content__text
       = f.text_area :text, class: "form-control",placeholder: "内容", required: ""
     .post-content__footer
-      =f.submit "投稿する", class: "btn btn-info"
-      
+      =f.submit "更新する", class: "btn btn-info"

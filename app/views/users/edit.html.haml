@@ -1,0 +1,30 @@
+.user-edi
+  .user-edi__header
+    = link_to image_tag('Edit Master.png',size: "220x100"), root_path
+  .user-edi__triangle
+  .user-edi__top アカウントの編集
+  .user-edi__container
+    .user-edi__inner__form
+      = form_for(current_user) do |f|
+        .user-edi__inner__list
+          %label プロフィール画像
+          - if current_user.image?
+            .user-edi__inner__image
+              = image_tag current_user.image.thumb50.url
+            .file-input
+              = f.file_field :image
+          - else
+            .user-edi__inner__image
+              = image_tag('sample_img.png',size: "100x80")
+            .file-input
+              = f.file_field :image
+        .user-edi__inner__field
+          %label ニックネーム
+          .field-input
+            = f.text_field :nickname, autofocus: true
+        .user-edi__inner__field
+          %label メールアドレス
+          .field-input
+            = f.email_field :email
+        .user-edi__inner__actions
+          = f.submit "更新", class: 'btn'
