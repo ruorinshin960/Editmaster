@@ -2,26 +2,26 @@
 最近趣味で動画編集を始めた際、専門的に編集技術をアウトプットできるかつトラブルシューティングできるサイトが存在しなかったため
 動画編集者版Qiitaのような物を作ってみたかった
 
-### [作成サイトリンク](http://www.editmasterhub.com/)
+#### [Editmaster](http://www.editmasterhub.com/)
 
-# 搭載機能
-## 実装
+## 搭載機能
+### 実装
 Markdownによる投稿機能  
 検索機能  
 タグ機能  
 
-## 実装予定
+### 実装予定
 いいね機能
 コミュニティ機能
 
-# version
+## version
 ruby 2.5.7  
 Rails 5.2.3  
 mysql 0.5.2  
 
-# DB設計 
+## DB設計 
 
-## usersテーブル
+### usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -29,36 +29,36 @@ mysql 0.5.2
 |nickname|string|null: false,index: true|
 |mail|string|null: false, unipue: true|
 
-### Association
+#### Association
 - has_many :articles
 - has_many :comments
 - has_many :groups, through: :group_users
 - has_many :group_users
 
-## groupsテーブル
+### groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |group_name|string|null: false, unipue: true|
 
-### Association
+#### Association
 - has_many :users, through: :group_users
 - has_many :group_users
 - has_many :articles
 
 
-## groups_usersテーブル
+### groups_usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
-### Association
+#### Association
 - belongs_to :group
 - belongs_to :user
 
-## articlesテーブル
+### articlesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -68,12 +68,12 @@ mysql 0.5.2
 |user_id|integer|foreign_key: true|
 
 
-### Association
+#### Association
 - belongs_to :user
 - has_many :comments
 
 
-## commentsテーブル
+### commentsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -82,6 +82,6 @@ mysql 0.5.2
 |user_id|integer|null: false, foreign_key: true|
 |article_id|integer|null: false, foreign_key: true|
 
-### Association
+#### Association
 - belongs_to :article
 - belongs_to :user# editgate
