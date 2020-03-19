@@ -2,7 +2,7 @@
 最近趣味で動画編集を始めた際、専門的に編集技術をアウトプットできるかつトラブルシューティングできるサイトが存在しなかったため
 動画編集者版Qiitaのような物を作ってみたかった
 
-#### [Editmaster](http://www.editmasterhub.com/)
+#### [⇨（作成サイトEditmaster](http://www.editmasterhub.com/)
 
 ## 搭載機能
 ### 実装
@@ -34,6 +34,7 @@ mysql 0.5.2
 - has_many :comments
 - has_many :groups, through: :group_users
 - has_many :group_users
+- has_many :likes, dependent: :destroy
 
 ### groupsテーブル
 
@@ -71,7 +72,7 @@ mysql 0.5.2
 #### Association
 - belongs_to :user
 - has_many :comments
-
+- has_many :likes, dependent: :destroy
 
 ### commentsテーブル
 
@@ -85,3 +86,13 @@ mysql 0.5.2
 #### Association
 - belongs_to :article
 - belongs_to :user# editgate
+
+### likesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|references|null: false, foreign_key: true|
+|article_id|references|null: false, foreign_key: true|
+
+#### Association
+- belongs_to :user
+- belongs_to :article
