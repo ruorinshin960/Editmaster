@@ -13,7 +13,7 @@
           .article-content__main__center__list__tagbox
             = render 'articles/tag_list', tag_list: article.tag_list
           .article-content__main__center__list__nickname
-            %a{href: "/users/#{article.user_id}"}
+            %a{href: "/users/#{article.user.id}"}
               = "投稿者 " + article.user.nickname
           .article-content__main__center__list__datetime
             = time_ago_in_words(article.created_at)+"前"

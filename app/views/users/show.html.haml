@@ -26,7 +26,7 @@
         %a
           = link_to "編集", edit_user_path
     .userpage-right
-      - @article.each do |article|
+      - @articles.each do |article|
         .userpage-right__list
           .userpage-right__list__title
             %a{href: "/articles/#{article.id}"}
@@ -36,7 +36,7 @@
           .userpage-right__list__datetime
             = time_ago_in_words(article.created_at)+"前"
   .userpage__footer  
-    = paginate @article
+    = paginate @articles
 - else
   .userpage
     .userpage-left
@@ -45,8 +45,6 @@
           %h1 プロフィール画像
           %li
             = image_tag @user.image.thumb50.url
-          %a
-            = link_to "編集", edit_user_path
         - else
           %h1 プロフィール画像
           %li

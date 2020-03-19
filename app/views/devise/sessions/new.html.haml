@@ -7,10 +7,9 @@
     .login-menu__sns 
       .login-menu__google
         = link_to image_tag('google.png',size: "60x50"), user_google_oauth2_omniauth_authorize_path, method: :post
-      .login-menu__twitter
-        = link_to image_tag('Twitter_Social_Icon_Rounded_Square_Color.png',size: "60x50"), "#"
     .login-menu__inner OR
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      = devise_error_messages!
       .login-menu__field
         %label メールアドレス
         %br/
@@ -25,6 +24,5 @@
           .login-menu__text パスワードを記憶させる
       .login-menu__btn
         = f.submit "ログイン"
-      = link_to "パスワードを忘れましたか？", new_password_path(resource_name),id: 'remember'
       .login-menu__under  
         = render "devise/shared/links"

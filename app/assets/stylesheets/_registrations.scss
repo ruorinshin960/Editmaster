@@ -1,3 +1,7 @@
+#error_explanation{
+    font-weight: bold;
+}
+
 .registration-menu{
   width: 400px;
   margin: 16px auto;
@@ -28,10 +32,7 @@
     display: flex;
   }
   &__google{
-    margin: 0 0 0 110px;
-  }
-  &__twitter{
-    margin: 0 0 0 40px;
+    margin: 0 auto;
   }
   &__inner{
    text-align: center;

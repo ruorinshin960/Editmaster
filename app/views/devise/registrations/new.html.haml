@@ -7,11 +7,9 @@
     .registration-menu__sns
       .registration-menu__google
         = link_to image_tag('google.png',size: "60x50"), user_google_oauth2_omniauth_authorize_path, method: :post
-      .registration-menu__twitter
-        = link_to image_tag('Twitter_Social_Icon_Rounded_Square_Color.png',size: "60x50"), "#"
     .registration-menu__inner OR
     = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-      = render "devise/shared/error_messages", resource: resource
+      = devise_error_messages!
       .registration-menu__field
         %label ニックネーム
         %span 必須
