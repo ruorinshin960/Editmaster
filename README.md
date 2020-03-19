@@ -2,19 +2,20 @@
 最近、趣味で動画編集を始めた際、専門的に編集技術をアウトプットできるかつトラブルシューティングできるサイトが存在しなかったため
 動画編集者版Qiitaのような物を作ってみたかった
 
-#[リンク](http://www.editmasterhub.com/)
+# [リンク](http://www.editmasterhub.com/)
 
 # 搭載機能
-##実装
+## 実装
 Markdownによる投稿機能  
 検索機能  
 タグ機能  
 
-##実装中
+## 実装予定
 
 # version
 ruby 2.5.7  
 Rails 5.2.3  
+mysql 0.5.2  
 
 # DB設計 
 
