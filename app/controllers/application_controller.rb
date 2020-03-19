@@ -9,10 +9,6 @@ class ApplicationController < ActionController::Base
      # 検索結果の一覧：  @search_articles = @search.result.order(created_at: "DESC")
      # distinct: trueは検索結果のレコード重複しないようにします。
   end
-  
-  def after_sign_in_path_for(resource)
-    root_path(resource.id)
-  end
 
   def configre_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname,:email,:password])

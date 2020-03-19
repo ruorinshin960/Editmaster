@@ -60,10 +60,10 @@
   .userpage-right{
     z-index: 0;
     width: 700px;
-    height: 505px;
-    background-color: #fff;
+    max-height: 505px;
     margin: 0 0 0 -120px;
     &__list{
+      background-color: #fff;
       border-bottom: 1px solid #3f3d3d;
       &__title{
         font-weight: bold;
