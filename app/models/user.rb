@@ -9,6 +9,11 @@ class User < ApplicationRecord
   
   mount_uploader :image, ImageUploader
 
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :nickname, presence: true, length: { maximum: 20 }
+  validates :email, presence: true, uniqueness: true, format: { with: VALID_EMAIL_REGEX }
+  validates :password, presence: true,length: { minimum: 6 , maximum: 128 }
+
   def self.find_oauth(auth)
     @user = User.where(uid: auth.uid, provider: auth.provider).first #userテーブルにprovider、uidがあったらログイン処理
               

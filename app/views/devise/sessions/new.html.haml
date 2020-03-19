@@ -9,6 +9,7 @@
         = link_to image_tag('google.png',size: "60x50"), user_google_oauth2_omniauth_authorize_path, method: :post
     .login-menu__inner OR
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      = devise_error_messages!
       .login-menu__field
         %label メールアドレス
         %br/

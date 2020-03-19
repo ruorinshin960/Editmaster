@@ -45,8 +45,6 @@
           %h1 プロフィール画像
           %li
             = image_tag @user.image.thumb50.url
-          %a
-            = link_to "編集", edit_user_path
         - else
           %h1 プロフィール画像
           %li
