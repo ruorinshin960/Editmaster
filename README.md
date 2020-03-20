@@ -24,8 +24,10 @@ SSL証明書の設定
 ## version
 ruby 2.5.7  
 Rails 5.2.3  
-mysql 0.5.2  
-
+MySQL  
+Github  
+AWS  
+Visual Studio Code  
 ## DB設計 
 
 ### usersテーブル
