@@ -94,7 +94,7 @@ Visual Studio Code
 
 #### Association
 - belongs_to :article
-- belongs_to :user# editgate
+- belongs_to :user
 
 ### likesテーブル
 |Column|Type|Options|
