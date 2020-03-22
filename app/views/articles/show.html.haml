@@ -2,11 +2,8 @@
   .article-detail__header
     = render partial: 'header2'
   .article-detail__main
-    .article-detail__left
-      - if @article.youtube_url.present?
-        %iframe{allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "", frameborder: "0", height: "315", src: "https://www.youtube.com/embed/#{@article.youtube_url}", :width => "560"}
-      - else
-        %h1.nothing NO DATA
+    .article-detail__movie
+      %iframe{allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "", frameborder: "0", height: "315", src: "https://www.youtube.com/embed/#{@article.youtube_url}", :width => "560"}
     .article-detail__right
       .article-detail__list
         .article-detail__title
@@ -20,9 +17,30 @@
             = "更新日: " +l(@article.updated_at, format: :long)
         .article-detail__body
           = markdown(@article.text)
-  - if user_signed_in? && current_user.id == @article.user_id
-    .article-detail__edit
-      = link_to edit_article_path(@article) do
-        %button.btn.btn-edit{type: "button"} 編集
-      = link_to @article, method: :delete,data: { confirm: "この記事を削除して大丈夫ですか？" } do
-        %button.btn.btn-delete 削除
+      .article-detail__edit
+        = link_to edit_article_path(@article) do
+          %button.btn.btn-edit{type: "button"} 編集
+        = link_to @article, method: :delete,data: { confirm: "この記事を削除して大丈夫ですか？" } do
+          %button.btn.btn-delete 削除
+  .article-detail__comment
+    - if current_user
+      .article-detail__comment__form
+        = form_with(model: [@article, @comment], local: true) do |form|
+          = form.text_area :comment, placeholder: "ご自由にコメントしてください", rows: "2"
+          .article-detail__comment__form
+            = form.submit "コメントする"
+    - else
+      .article-detail__comment__form
+        %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+    %h4 コメント一覧
+    .article-detail__comment-list
+      - @comments.each do |comment|
+        .article-detail__comment-list__text
+          = comment.comment
+        .article-detail__comment-list-second
+          .article-detail__comment-list-second__name ユーザー名:
+          %a
+            = link_to comment.user.nickname, "/users/#{comment.user_id}"
+            = I18n.localize comment.created_at, format: :long
+    .article-detail__comment-list__page
+      = paginate @comments

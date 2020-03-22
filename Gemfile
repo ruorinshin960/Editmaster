@@ -92,7 +92,7 @@ gem 'dotenv-rails'
 gem 'ransack'
 gem 'redcarpet'
 gem 'coderay'
-
+gem 'marked-rails'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'

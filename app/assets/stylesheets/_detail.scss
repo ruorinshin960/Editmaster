@@ -1,6 +1,7 @@
+
 .article-detail{
-  background-color:#f5f5f5;
-  height: 720px;
+  background-color:#f5f5f5; 
+  height: 100%;
   &__header{
     z-index: 1;
     position: fixed;
@@ -40,33 +41,26 @@
       }
     }
   }
-  .nothing{
-    margin: 200px 0 0 320px;
-    font-size: 30px;
-  }
   &__main{
-    padding: 80px 0 0 0;
+   position: relative;
+   min-height: 520px;
   }
-  &__left{
-    z-index: 0;
-    position: fixed;
+  &__movie{
     display: table-cell;
-    height: 900px;
+    z-index: 0;
     iframe{
-     margin: 120px 0 0 80px;
+     position: absolute;
+     margin: 120px 70px 13px 0;
+     left: 50px;
     }
   }
   &__right{
-    z-index: 0;
     display: table-cell;
-    left: 640px;
-    position: relative;
   }
     &__list{
       background-color:#fff;
       width: 700px;
-      margin:  40px 0 0 50px;
-      min-height: 200px;
+      margin:  115px 0 0 700px;
     }
     &__title{
      font-size: 22px;
@@ -95,13 +89,80 @@
     }
     &__body{
     font-size: 10pt;
-     margin: 5px;
-     overflow-wrap: break-word;
+    padding: 0 0 5px 0;
+    margin: 5px;
     }
+    &__comment{
+    width: 100%;
+    padding:  0 0 10px 0;
+    background-color:rgb(97, 97, 97);
+     h4{
+      margin: 5px 0 5px 370px;
+      text-align: center;
+      width: 100px;
+      color: #fff;
+      border: solid 3px #fff;
+      padding: 0.5em;
+      border-radius: 0.5em;
+     }
+     &-list{
+      background-color:#f5f5f5;
+      padding: 2px 0 0 0;
+      width: 700px;
+      margin: 5px 0 5px 370px;
+      &__text{
+        margin: 2px 5px 5px;
+        overflow-wrap: break-word;
+      }
+        &-second{
+        margin: 0 0 5px 5px;
+        display: inline-block;
+        font-weight: bold;
+        border-bottom: solid 1px;
+        &__name{
+          display: inline-block;
+
+        }
+      }
+        &__page{
+          text-align: center;
+        }
+  }
+      &__form{
+        text-align: center;
+        textarea{
+        margin: 10px;
+        width: 700px;
+        height: 100px;
+        border: 2px solid #0a0;
+        border-radius: 0.67em; 
+        padding: 0.5em;        
+        background-color: snow;
+        font-size: 1em;          
+        line-height: 1.2;
+        }
+        p{
+          padding: 10px;
+          font-size: 12pt;;
+          color: #f5f5f5;
+        }
+        input{
+          width: 100px;
+          height:30px;
+          line-height: 30px;
+          color: #FFF;
+          text-decoration: none;
+          text-align: center;
+          background-color: #0a0;
+          border-radius: 5px;
+          -webkit-transition: all 0.5s;
+          transition: all 0.5s;
+        }
+      }
+  }
     &__edit{
-      position: relative;
-      top: 20px;
-      left: 980px;
+     margin: 10px 0 10px 1000px;
+      width: 200px;
       .btn-edit{
        color: #fff;
        background-color: rgba(77, 209, 37, 0.849);

@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,:omniauthable,omniauth_providers: %i[google_oauth2]
 
   has_many :articles, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  
   acts_as_ordered_taggable_on :skills, :interests
   
   mount_uploader :image, ImageUploader
