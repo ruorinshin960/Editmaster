@@ -8,7 +8,7 @@
     .post-content__tag
       = f.text_field :tag_list, value: @article.tag_list.join(','),"data-role": "tagsinput", class: "form-control",placeholder: "タグ"
     .post-content__url
-      = f.text_field :youtube_url, class: "form-control",placeholder: "YouTubeのURL"
+      = f.text_field :youtube_url, class: "form-control",placeholder: "対象のYouTubeのURLを貼り付けてください", required: ""
     .post-content__text
       = f.text_area :text, class: "form-control",placeholder: "内容", required: ""
     .post-content__footer
