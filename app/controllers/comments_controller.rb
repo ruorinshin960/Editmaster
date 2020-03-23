@@ -6,9 +6,6 @@ class CommentsController < ApplicationController
     redirect_to "/articles/#{comment.article.id}"
   end
 
-  def destroy
-  end
-
   private
 
   def comment_params

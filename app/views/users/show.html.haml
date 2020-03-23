@@ -9,25 +9,25 @@
           %li
             = image_tag current_user.image.thumb50.url
           %a
-            = link_to "編集", edit_user_path
+            = link_to "編集", edit_user_path(current_user.id)
         - else
           %h1 プロフィール画像
           %li
             = image_tag('sample_img.png',size: "70x50")
           %a
-            = link_to "編集", edit_user_path
+            = link_to "編集", edit_user_path(current_user.id)
       .userpage-left__name
         %h1 ニックネーム
         %li
           = current_user.nickname
         %a
-          = link_to "編集", edit_user_path
+          = link_to "編集", edit_user_path(current_user.id)
       .userpage-left__email
         %h1 メールアドレス
         %li
           = current_user.email
         %a
-          = link_to "編集", edit_user_path
+          = link_to "編集", edit_user_path(current_user.id)
     .userpage-right
       - @articles.each do |article|
         .userpage-right__list

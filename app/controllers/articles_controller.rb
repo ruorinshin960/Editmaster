@@ -13,6 +13,7 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
     @comment = Comment.new
+    @user = Comment.find(params[:id])
     @comments = @article.comments.includes(:user).page(params[:page]).per(5).all.order(created_at: :desc)
   end
 

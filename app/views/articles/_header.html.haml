@@ -13,8 +13,8 @@
         = link_to "/articles/new", class: "btn-warning" do
           %button.btn.btn-success{type: "button"} 投稿する
       .article-content__header__list
-        %button.btn.btn-primary{type: "button"}
-          = link_to current_user.nickname, user_path(current_user.id)
+        = link_to user_path(current_user.id), method: :get do
+          %button.btn.btn-primary{type: "button"} マイページ
         = link_to destroy_user_session_path, method: :delete do
           %button.btn.btn-light{type: "button"} ログアウト
   - else

@@ -10,11 +10,13 @@ class UsersController < ApplicationController
    end
  
    def update
-     if current_user.update(user_params)
-       redirect_to root_path
-     else
-       render :edit
-     end
+    if current_user.update(user_params)
+      flash[:success] = 'ユーザー情報を編集しました。'
+      redirect_to "/users/#{current_user.id}"
+    else
+      flash.now[:danger] = 'ユーザー情報の編集に失敗しました。'
+      render :edit
+    end   
    end
 
    private
