@@ -7,7 +7,6 @@ class ApplicationController < ActionController::Base
     @search = Article.ransack(params[:q]) #ransackの検索メソッド
     @search_articles = @search.result(distinct: true).order(created_at: "DESC").includes(:user).page(params[:page]).per(15)
      # 検索結果の一覧：  @search_articles = @search.result.order(created_at: "DESC")
-     # distinct: trueは検索結果のレコード重複しないようにします。
   end
 
   def configre_permitted_parameters

@@ -17,11 +17,12 @@
             = "更新日: " +l(@article.updated_at, format: :long)
         .article-detail__body
           = markdown(@article.text)
-      .article-detail__edit
-        = link_to edit_article_path(@article) do
-          %button.btn.btn-edit{type: "button"} 編集
-        = link_to @article, method: :delete,data: { confirm: "この記事を削除して大丈夫ですか？" } do
-          %button.btn.btn-delete 削除
+      - if user_signed_in? && @article.user_id == current_user.id
+        .article-detail__edit
+          = link_to edit_article_path(@article) do
+            %button.btn.btn-edit{type: "button"} 編集
+          = link_to @article, method: :delete,data: { confirm: "この記事を削除して大丈夫ですか？" } do
+            %button.btn.btn-delete 削除
   .article-detail__comment
     - if current_user
       .article-detail__comment__form
