@@ -27,7 +27,7 @@ Capistranoを使った自動デプロイ機能
 SSL証明書の設定 
 アフィリエイトリンク  
 Google sns認証機能(SSL設定後本番環境へ反映）  
-![result](https://github.com/ruorinshin960/Editmaster/blob/master/app/assets/images/102b70c55422cecd9e79c8808ecdaee0.gif)
+![result](https://gyazo.com/102b70c55422cecd9e79c8808ecdaee0)
 
 ## version
 ruby 2.5.7  
