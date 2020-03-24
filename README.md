@@ -2,7 +2,11 @@
 趣味で動画編集を始めた際、専門的に編集技術をアウトプットできてかつトラブルシューティングできるようなサイトが存在しなかったため
 動画編集者版Qiitaのような物を作ってみたかったため
 
-#### [⇨（作成サイト)Editmaster](http://www.editmasterhub.com/)
+#### [⇨（作成サイト)Editmaster](http://www.editmasterhub.com/)  
+
+ログイン用アカウント
+メールアドレス: hogehoge@gmail.com
+パスワード: hogehoge21
 
 ## 搭載機能
 ### 実装
