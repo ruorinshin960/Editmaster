@@ -4,7 +4,7 @@
 
 #### [⇨（作成サイト)Editmaster](http://www.editmasterhub.com/)  
 
-ログイン用アカウント
+ログイン用アカウント  
 メールアドレス: hogehoge@gmail.com  
 パスワード: hogehoge21  
 
