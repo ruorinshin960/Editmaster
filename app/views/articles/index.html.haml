@@ -18,5 +18,9 @@
           .article-content__main__center__list__datetime
             = time_ago_in_words(article.created_at)+"前"
     .article-content__main__right 
+      %a{href: "//af.moshimo.com/af/c/click?a_id=1880486&p_id=54&pc_id=54&pl_id=1223&url=http%3A%2F%2Fwww.rakuten.co.jp", rel:"nofollow"}
+        %img{src: "//image.moshimo.com/af-img/0032/000000001231.gif", style: "border:none;"}
+  
+
   .article-content__footer  
     = paginate @article
