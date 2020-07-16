@@ -3,7 +3,7 @@
 たくさんの編集技術や素材などの知識を標準化させるような、Qiitaの動画編集者版を作り、誰もが動画編集をできることを目的とした
 webアプリケーションを作成してみたいと考えたため。
 
-#### [⇨（作成サイト)Editmaster](http://www.editmasterhub.com/)  
+#### [⇨（現在閉鎖中)Editmaster](http://www.editmasterhub.com/)  
 
 ##### ログイン用アカウント  
 メールアドレス: hogehoge@gmail.com  
