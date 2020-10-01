@@ -20,7 +20,7 @@ YoutubeのURLを取得しての動画投稿
 AWSのEC2サーバーを使ったデプロイ環境  
 Capistranoを使った自動デプロイ機能  
 ドメイン取得  
-
+Gppgle認証
 [![Image from Gyazo](https://i.gyazo.com/102b70c55422cecd9e79c8808ecdaee0.gif)](https://gyazo.com/102b70c55422cecd9e79c8808ecdaee0)
 
 ## version
