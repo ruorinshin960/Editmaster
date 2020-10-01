@@ -21,11 +21,6 @@ AWSのEC2サーバーを使ったデプロイ環境
 Capistranoを使った自動デプロイ機能  
 ドメイン取得  
 
-
-### 実装予定
-メデイアクエリを利用してスマホ用のデザインを実装  
-SSL証明書の設定 
-Google sns認証機能ローカルでは実装(SSL設定後本番環境へ反映）  
 [![Image from Gyazo](https://i.gyazo.com/102b70c55422cecd9e79c8808ecdaee0.gif)](https://gyazo.com/102b70c55422cecd9e79c8808ecdaee0)
 
 ## version
