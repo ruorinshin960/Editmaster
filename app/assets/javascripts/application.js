@@ -17,5 +17,4 @@
 //= require marked
 //= require bootstrap-tagsinput.min
 //= require bootstrap-sprockets
-//= require jquery/dist/jquery.js
 //= require_tree .
