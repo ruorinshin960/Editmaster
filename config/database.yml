@@ -48,7 +48,7 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default　
+  <<: *default 
   database: editmaster_production
   username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
