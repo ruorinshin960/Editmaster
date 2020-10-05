@@ -4,13 +4,13 @@
 webアプリケーションを作成してみたいと考えたため。
  
 #### topページ(検索機能）
-[![Image from Gyazo](https://i.gyazo.com/caefe181eb423b3c9e44975c87e63eb1.png)](https://gyazo.com/caefe181eb423b3c9e44975c87e63eb1)  
+[![Image from Gyazo](https://i.gyazo.com/5126b4f5f247ecc503d2a8a05e79b70c.gif)](https://gyazo.com/5126b4f5f247ecc503d2a8a05e79b70c)  
 #### サインアップ（ログイン）  
 [![Image from Gyazo](https://i.gyazo.com/5a7be30bf56a420221bc91d0120d2717.gif)](https://gyazo.com/5a7be30bf56a420221bc91d0120d2717)  
 #### 投稿ページ（タグ機能）
 [![Image from Gyazo](https://i.gyazo.com/c4f280aada14b56b39087bfef6fbee01.gif)](https://gyazo.com/c4f280aada14b56b39087bfef6fbee01)  
 #### 詳細ページ（編集・コメント）  
-[![Image from Gyazo](https://i.gyazo.com/bbad7e49d094cddcc3bb4ea9c57f30b5.png)](https://gyazo.com/bbad7e49d094cddcc3bb4ea9c57f30b5)  
+[![Image from Gyazo](https://i.gyazo.com/1dc486d5d9c8bb8a99168bd70ab12937.gif)](https://gyazo.com/1dc486d5d9c8bb8a99168bd70ab12937)   
 #### マイページ
 [![Image from Gyazo](https://i.gyazo.com/a7e2195558ac7be86b6ef01697131bae.png)](https://gyazo.com/a7e2195558ac7be86b6ef01697131bae)  
 
