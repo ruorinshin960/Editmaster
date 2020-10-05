@@ -3,7 +3,7 @@
 たくさんの編集技術や素材などの知識を標準化させるような、Qiitaの動画編集者版を作り、誰もが動画編集をできることを目的とした
 webアプリケーションを作成してみたいと考えたため。
  
-#### topページ
+#### topページ(検索機能）
 [![Image from Gyazo](https://i.gyazo.com/caefe181eb423b3c9e44975c87e63eb1.png)](https://gyazo.com/caefe181eb423b3c9e44975c87e63eb1)  
 #### サインアップ（ログイン）  
 [![Image from Gyazo](https://i.gyazo.com/5a7be30bf56a420221bc91d0120d2717.gif)](https://gyazo.com/5a7be30bf56a420221bc91d0120d2717)  
