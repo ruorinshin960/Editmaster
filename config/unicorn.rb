@@ -12,7 +12,7 @@ pid "#{app_path}/shared/tmp/pids/unicorn.pid"
 stderr_path "#{app_path}/shared/log/unicorn.stderr.log"
 stdout_path "#{app_path}/shared/log/unicorn.stdout.log"
 
-timeout 30
+timeout 60
 # Railsアプリケーションの応答を待つ上限時間を設定
 
 preload_app true
