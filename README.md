@@ -2,15 +2,19 @@
 趣味で動画編集を始めた際、専門的に編集技術をアウトプットできてかつトラブルシューティングできるようなサイトが存在しなかったため
 たくさんの編集技術や素材などの知識を標準化させるような、Qiitaの動画編集者版を作り、誰もが動画編集をできることを目的とした
 webアプリケーションを作成してみたいと考えたため。
-
-#### [⇨（現在閉鎖中)Editmaster](http://www.editmasterhub.com/)  
-#### top  
-[![Image from Gyazo](https://i.gyazo.com/caefe181eb423b3c9e44975c87e63eb1.png)](https://gyazo.com/caefe181eb423b3c9e44975c87e63eb1)
+ 
+#### topページ
+[![Image from Gyazo](https://i.gyazo.com/caefe181eb423b3c9e44975c87e63eb1.png)](https://gyazo.com/caefe181eb423b3c9e44975c87e63eb1)  
+#### サインアップ（ログイン）  
 [![Image from Gyazo](https://i.gyazo.com/5a7be30bf56a420221bc91d0120d2717.gif)](https://gyazo.com/5a7be30bf56a420221bc91d0120d2717)  
+#### 投稿ページ（タグ機能）
 [![Image from Gyazo](https://i.gyazo.com/c4f280aada14b56b39087bfef6fbee01.gif)](https://gyazo.com/c4f280aada14b56b39087bfef6fbee01)  
+#### 詳細ページ（編集）  
 [![Image from Gyazo](https://i.gyazo.com/bbad7e49d094cddcc3bb4ea9c57f30b5.png)](https://gyazo.com/bbad7e49d094cddcc3bb4ea9c57f30b5)  
+#### マイページ
 [![Image from Gyazo](https://i.gyazo.com/a7e2195558ac7be86b6ef01697131bae.png)](https://gyazo.com/a7e2195558ac7be86b6ef01697131bae)  
 
+#### [⇨（現在閉鎖中)Editmaster](http://www.editmasterhub.com/)  
 ##### ログイン用アカウント  
 メールアドレス: hogehoge@gmail.com  
 パスワード: hogehoge21  
